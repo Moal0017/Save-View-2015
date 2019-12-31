@@ -926,6 +926,23 @@ public class Filtration extends AppCompatActivity implements AdapterView.OnItemS
         }
     }
 
+    // Save filtered data
+    public void saveFiltrationData(View v) {
+        Toast.makeText(getBaseContext(), "Applying Filtration, please wait..", Toast.LENGTH_LONG).show();
+        new Thread(new SaveFilteredData()).start();
+        synchronized(mutex) {
+            // Wait until being notified
+            try {
+                mutex.wait();
+                Toast.makeText(getBaseContext(), "Done!", Toast.LENGTH_SHORT).show();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        select_btn.setEnabled(false);
+        save_btn.setEnabled(false);
+    }
     // Main thread of filtration (parent)
     class DoFiltration implements Runnable {
         Filtration.Channel1Thread ch1 = new Filtration.Channel1Thread();
@@ -946,23 +963,7 @@ public class Filtration extends AppCompatActivity implements AdapterView.OnItemS
         Thread chThread8 = new Thread(ch8);
         private StringTokenizer st = new StringTokenizer("");
 
-        // Save filtered data
-        public void saveFiltrationData(View v) {
-            Toast.makeText(getBaseContext(), "Applying Filtration, please wait..", Toast.LENGTH_LONG).show();
-            new Thread(new SaveFilteredData()).start();
-            synchronized(mutex) {
-                // Wait until being notified
-                try {
-                    mutex.wait();
-                    Toast.makeText(getBaseContext(), "Done!", Toast.LENGTH_SHORT).show();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
 
-            select_btn.setEnabled(false);
-            save_btn.setEnabled(false);
-        }
 
         public DoFiltration(StringTokenizer st) {
             this.st = st;
