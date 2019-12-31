@@ -179,7 +179,6 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="250dp"
             android:layout_marginEnd="10dp"
-            android:onClick="saveFiltrationData"
             android:text="Filter and save" />
 
     </FrameLayout>

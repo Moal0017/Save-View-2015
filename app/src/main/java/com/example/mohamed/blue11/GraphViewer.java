@@ -10,6 +10,7 @@ import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -47,7 +48,7 @@ import com.example.mohamed.blue11.Bluetooth.Sensor;
 import com.example.mohamed.blue11.Filter.Filtration;
 //import com.example.mohamed.blue11.Filter.Filtration;
 
-public class GraphViewer extends ActionBarActivity {
+public class GraphViewer extends AppCompatActivity {
 
     private TimeSeries Timeseries1;
     private TimeSeries Timeseries2;
@@ -181,10 +182,7 @@ public class GraphViewer extends ActionBarActivity {
             switch (item.getItemId()) {
 
                 case R.id.filter: {
-                    // Intent i = new Intent(getApplication(), FilterSetting.class);
-
                     Intent i = new Intent(getApplication(), Filtration.class);
-
                     startActivity(i);
                     return true;
                 }
@@ -1075,284 +1073,7 @@ public class GraphViewer extends ActionBarActivity {
         }
     }
     public void openChart() {
-
         new OpenChart().run();
-//        bundle = getIntent().getExtras();
-//
-//        if (graphCheck == true) {
-//            XYseries1 = new XYSeries(bundle.getString("channel1"));
-//            XYseries2 = new XYSeries(bundle.getString("channel2"));
-//            XYseries3 = new XYSeries(bundle.getString("channel3"));
-//            XYseries4 = new XYSeries(bundle.getString("channel4"));
-//            XYseries5 = new XYSeries(bundle.getString("channel5"));
-//            XYseries6 = new XYSeries(bundle.getString("channel6"));
-//            XYseries7 = new XYSeries(bundle.getString("channel7"));
-//            XYseries8 = new XYSeries(bundle.getString("channel8"));
-//
-//            int counter = 1;
-//
-//            for (int i = 0; i < sensorList.size(); i++) {
-//
-//                XYseries1.add(counter, sensorList.get(i).getChannel1());
-//                XYseries2.add(counter, sensorList.get(i).getChannel2());
-//                XYseries3.add(counter, sensorList.get(i).getChannel3());
-//                XYseries4.add(counter, sensorList.get(i).getChannel4());
-//                XYseries5.add(counter, sensorList.get(i).getChannel5());
-//                XYseries6.add(counter, sensorList.get(i).getChannel6());
-//                XYseries7.add(counter, sensorList.get(i).getChannel7());
-//                XYseries8.add(counter, sensorList.get(i).getChannel8());
-//                counter++;
-//            }
-//        } else {
-//            // Creating an TimeSeries for Channel1
-//            Timeseries1 = new TimeSeries(bundle.getString("channel1"));
-//            // Creating an TimeSeries for Channel2
-//            Timeseries2 = new TimeSeries(bundle.getString("channel2"));
-//            // Creating an TimeSeries for Channel3
-//            Timeseries3 = new TimeSeries(bundle.getString("channel3"));
-//            // Creating an TimeSeries for Channel4
-//            Timeseries4 = new TimeSeries(bundle.getString("channel4"));
-//            // Creating an TimeSeries for Channel5
-//            Timeseries5 = new TimeSeries(bundle.getString("channel5"));
-//            // Creating an TimeSeries for Channel6
-//            Timeseries6 = new TimeSeries(bundle.getString("channel6"));
-//            // Creating an TimeSeries for Channel7
-//            Timeseries7 = new TimeSeries(bundle.getString("channel7"));
-//            // Creating an TimeSeries for Channel8
-//            Timeseries8 = new TimeSeries(bundle.getString("channel8"));
-//
-//            // ADDing data from textfile for all the channels
-//            for (int i = 0; i < sensorList.size(); i++) {
-//
-//                Timeseries1.add(sensorList.get(i).getDate(), sensorList.get(i)
-//                        .getChannel1());
-//
-//                Timeseries2.add(sensorList.get(i).getDate(), sensorList.get(i)
-//                        .getChannel2());
-//
-//                Timeseries3.add(sensorList.get(i).getDate(), sensorList.get(i)
-//                        .getChannel3());
-//
-//                Timeseries4.add(sensorList.get(i).getDate(), sensorList.get(i)
-//                        .getChannel4());
-//
-//                Timeseries5.add(sensorList.get(i).getDate(), sensorList.get(i)
-//                        .getChannel5());
-//
-//                Timeseries6.add(sensorList.get(i).getDate(), sensorList.get(i)
-//                        .getChannel6());
-//
-//                Timeseries7.add(sensorList.get(i).getDate(), sensorList.get(i)
-//                        .getChannel7());
-//
-//                Timeseries8.add(sensorList.get(i).getDate(), sensorList.get(i)
-//                        .getChannel8());
-//            }
-//        }
-//
-//        // Creating a dataset to hold each series
-//        dataset = new XYMultipleSeriesDataset();
-//
-//        if (graphCheck == true) {
-//            // Adding Channel1 Series to the dataset
-//            dataset.addSeries(XYseries1);
-//            // Adding Channel2 Series to the dataset
-//            dataset.addSeries(XYseries2);
-//            // Adding Channel3 Series to the dataset
-//            dataset.addSeries(XYseries3);
-//            // Adding Channel4 Series to the dataset
-//            dataset.addSeries(XYseries4);
-//            // Adding Channel5 Series to the dataset
-//            dataset.addSeries(XYseries5);
-//            // Adding Channel6 Series to the dataset
-//            dataset.addSeries(XYseries6);
-//            // Adding Channel7 Series to the dataset
-//            dataset.addSeries(XYseries7);
-//            // Adding Channel8 Series to the dataset
-//            dataset.addSeries(XYseries8);
-//        } else {
-//            // Adding Channel1 Series to the dataset
-//            dataset.addSeries(Timeseries1);
-//            // Adding Channel2 Series to the dataset
-//            dataset.addSeries(Timeseries2);
-//            // Adding Channel3 Series to the dataset
-//            dataset.addSeries(Timeseries3);
-//            // Adding Channel4 Series to the dataset
-//            dataset.addSeries(Timeseries4);
-//            // Adding Channel5 Series to the dataset
-//            dataset.addSeries(Timeseries5);
-//            // Adding Channel6 Series to the dataset
-//            dataset.addSeries(Timeseries6);
-//            // Adding Channel7 Series to the dataset
-//            dataset.addSeries(Timeseries7);
-//            // Adding Channel8 Series to the dataset
-//            dataset.addSeries(Timeseries8);
-//        }
-//        // Creating XYSeriesRenderer to customize Channel1
-//        series1Renderer = new XYSeriesRenderer();
-//        series1Renderer.setColor(colors[0]);
-//        //series1Renderer.setLineWidth(2f);
-//        series1Renderer.setDisplayChartValues(false);
-//        // Setting lien graph point style circle
-//        series1Renderer.setPointStyle(PointStyle.CIRCLE);
-//        // Setting stroke of the line chart to solid
-//        //series1Renderer.setStroke(BasicStroke.SOLID);
-//        isChartValues1 = false;
-//
-//
-//        // Creating XYSeriesRenderer to customize Channel2
-//        series2Renderer = new XYSeriesRenderer();
-//        series2Renderer.setColor(colors[1]);
-//        series2Renderer.setDisplayChartValues(false);
-//        series2Renderer.setDisplayChartValuesDistance(10);
-//        series2Renderer.setPointStyle(PointStyle.CIRCLE);
-//        isChartValues2 = false;
-//
-//        // Creating XYSeriesRenderer to customize Channel3
-//        series3Renderer = new XYSeriesRenderer();
-//        series3Renderer.setColor(colors[2]);
-//        series3Renderer.setDisplayChartValues(false);
-//        series3Renderer.setDisplayChartValuesDistance(10);
-//        series3Renderer.setPointStyle(PointStyle.CIRCLE);
-//        isChartValues3 = false;
-//
-//        // Creating XYSeriesRenderer to customize Channel4
-//        series4Renderer = new XYSeriesRenderer();
-//        series4Renderer.setColor(colors[3]);
-//        series4Renderer.setDisplayChartValues(false);
-//        series4Renderer.setDisplayChartValuesDistance(10);
-//        series4Renderer.setPointStyle(PointStyle.CIRCLE);
-//        isChartValues4 = false;
-//
-//        // Creating XYSeriesRenderer to customize Channel5
-//        series5Renderer = new XYSeriesRenderer();
-//        series5Renderer.setColor(colors[4]);
-//        series5Renderer.setDisplayChartValues(false);
-//        series5Renderer.setDisplayChartValuesDistance(10);
-//        series5Renderer.setPointStyle(PointStyle.CIRCLE);
-//        isChartValues5 = false;
-//
-//        // Creating XYSeriesRenderer to customize Channel6
-//        series6Renderer = new XYSeriesRenderer();
-//        series6Renderer.setColor(colors[5]);
-//        series6Renderer.setDisplayChartValues(false);
-//        series6Renderer.setDisplayChartValuesDistance(10);
-//        series6Renderer.setPointStyle(PointStyle.CIRCLE);
-//        isChartValues6 = false;
-//
-//        // Creating XYSeriesRenderer to customize Channel7
-//        series7Renderer = new XYSeriesRenderer();
-//        series7Renderer.setColor(colors[6]);
-//        series7Renderer.setDisplayChartValues(false);
-//        series7Renderer.setDisplayChartValuesDistance(10);
-//        series7Renderer.setPointStyle(PointStyle.CIRCLE);
-//        isChartValues7 = false;
-//
-//        // Creating XYSeriesRenderer to customize Channel8
-//        series8Renderer = new XYSeriesRenderer();
-//        series8Renderer.setColor(colors[7]);
-//        series8Renderer.setDisplayChartValues(false);
-//        series8Renderer.setDisplayChartValuesDistance(10);
-//        series8Renderer.setPointStyle(PointStyle.CIRCLE);
-//        //series8Renderer.setStroke(BasicStroke.SOLID);
-//        isChartValues8 = false;
-//        isFilled = false;
-//
-//        // Creating a XYMultipleSeriesRenderer to customize whole chart
-//        multiRenderer = new XYMultipleSeriesRenderer();
-//        multiRenderer.setChartTitle("Signals");
-//        multiRenderer.setChartTitleTextSize(20f);
-//        multiRenderer.setZoomButtonsVisible(true);
-//        multiRenderer.setLabelsTextSize(20f);
-//        multiRenderer.setLegendTextSize(20f);
-//        multiRenderer.setInScroll(true);
-//        multiRenderer.setYLabelsColor(0, Color.BLACK);
-//        multiRenderer.setYLabelsAlign(Paint.Align.LEFT);
-//        multiRenderer.setMargins(new int[]{30, 0, 30, 0});
-//        //multiRenderer.setPointSize(4f);
-//        multiRenderer.setScale(2f);
-//        if (graphCheck == true) {
-//
-//            multiRenderer.setXLabels(5);
-//        } else {
-//            multiRenderer.setXLabels(1);
-//        }
-//        multiRenderer.setXLabelsAlign(Paint.Align.LEFT);
-//        multiRenderer.setAntialiasing(false);
-//        multiRenderer.setXRoundedLabels(false);
-//
-//        multiRenderer.setClickEnabled(true);
-//        multiRenderer.setSelectableBuffer(20);
-//
-//        multiRenderer.addSeriesRenderer(series1Renderer);
-//        multiRenderer.addSeriesRenderer(series2Renderer);
-//        multiRenderer.addSeriesRenderer(series3Renderer);
-//        multiRenderer.addSeriesRenderer(series4Renderer);
-//        multiRenderer.addSeriesRenderer(series5Renderer);
-//        multiRenderer.addSeriesRenderer(series6Renderer);
-//        multiRenderer.addSeriesRenderer(series7Renderer);
-//        multiRenderer.addSeriesRenderer(series8Renderer);
-//
-//        //this part is used to display graph on the xml
-//        LinearLayout chartContainer = (LinearLayout) findViewById(R.id.chart);
-//
-//        //remove any views before u paint the chart
-//        chartContainer.removeAllViews();
-//
-//        if (graphCheck == false) {
-//            // Creating Timechart
-//            mChart = (GraphicalView) ChartFactory.getTimeChartView(
-//                    getBaseContext(), dataset, multiRenderer, "yyyy-MM-dd" + "\n" + "HH:mm:ss");
-//        } else {
-//            // Creating XY chart
-//            mChart = ChartFactory.getLineChartView(getBaseContext(), dataset, multiRenderer);
-//        }
-//
-//        // adding the view to the linearlayout
-//        chartContainer.addView(mChart);
-//
-//        mChart.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Format formatter = new SimpleDateFormat("yyyy-MM-dd" + "\n" + "HH:mm:ss,SSS");
-//
-//                SeriesSelection seriesSelection = mChart
-//                        .getCurrentSeriesAndPoint();
-//
-//                if (seriesSelection == null) {
-//
-//                } else {
-//                    if (!graphCheck) {
-//
-//                        String data = "Data : ";
-//                        String date = "Date : ";
-//
-//                        // Getting the clicked Date ( x value )
-//                        long clickedDateSeconds = (long) seriesSelection
-//                                .getXValue();
-//                        Date clickedDate = new Date(clickedDateSeconds);
-//                        String strDate = formatter.format(clickedDate);
-//
-//                        // Getting the y value
-//                        double amount = (double) seriesSelection.getValue();
-//
-//                        // Displaying Toast Message
-//                        Toast.makeText(getBaseContext(),
-//                                date + strDate + "\n"
-//                                        + data + amount, Toast.LENGTH_LONG).show();
-//                    } else {
-//
-//                        String data = "Data : ";
-//                        // Getting the y value
-//                        double amount = (double) seriesSelection.getValue();
-//
-//                        // Displaying Toast Message
-//                        Toast.makeText(getBaseContext(), data + amount, Toast.LENGTH_LONG).show();
-//                    }
-//                }
-//            }
-//        });
-
     }
 
     /**
