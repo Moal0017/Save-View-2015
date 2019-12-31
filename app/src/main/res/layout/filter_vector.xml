@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="82dp">
+
+        <RadioButton
+            android:text="Lowpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/radioButtonLP" />
+
+        <RadioButton
+            android:text="Highpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/radioButtonLP"
+            android:layout_toRightOf="@+id/radioButtonLP"
+            android:layout_toEndOf="@+id/radioButtonLP"
+            android:layout_marginLeft="58dp"
+            android:layout_marginStart="58dp"
+            android:id="@+id/radioButtonHP" />
+
+        <RadioButton
+            android:text="Bandpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButtonBP"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/radioButtonHP"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:text="Bandstop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioButtonHP"
+            android:layout_alignLeft="@+id/radioButtonHP"
+            android:layout_alignStart="@+id/radioButtonHP"
+            android:id="@+id/radioButtonBS" />
+
+        <RadioButton
+            android:text="Moving\naverage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/radioButtonBS"
+            android:layout_toRightOf="@+id/radioButtonBS"
+            android:layout_toEndOf="@+id/radioButtonBS"
+            android:layout_marginLeft="21dp"
+            android:layout_marginStart="21dp"
+            android:id="@+id/radioButtonMV" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="311dp"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="0.2"
+            android:visibility="invisible"
+            android:ems="10"
+            android:id="@+id/editText4"
+            android:layout_alignBaseline="@+id/textViewwp"
+            android:layout_alignBottom="@+id/textViewwp"
+            android:layout_alignLeft="@+id/editText"
+            android:layout_alignStart="@+id/editText" />
+        <!-- android:layout_above="@id/buttonSave" -->
+
+
+        <EditText
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="0.1"
+            android:visibility="invisible"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:layout_below="@+id/Stopband"
+            android:layout_alignLeft="@+id/Stopband"
+            android:layout_alignStart="@+id/Stopband" />
+
+        <TextView
+            android:text="Stopband frequecny "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewwp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            android:id="@+id/textViewws" />
+
+        <EditText
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="0.3"
+            android:visibility="invisible"
+            android:ems="10"
+            android:layout_below="@+id/textViewwp"
+            android:id="@+id/editText5"
+            android:layout_alignLeft="@+id/editText4"
+            android:layout_alignStart="@+id/editText4"
+            android:layout_toLeftOf="@+id/textView14"
+            android:layout_toStartOf="@+id/textView14" />
+
+
+        <TextView
+            android:text="\ndb\n\nHz"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tespinnerxtView29"
+            android:layout_toRightOf="@+id/editText"
+            android:visibility="invisible"
+            android:layout_below="@+id/Stopband" />
+
+
+        <TextView
+            android:text="Hz\n\nHz"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/textView14"
+            android:visibility="invisible"
+            android:layout_toRightOf="@+id/editText4"
+            android:layout_below="@+id/editText8" />
+
+        <TextView
+            android:text="\nHz\n\nHz"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView15"
+            android:layout_toRightOf="@+id/editText5"
+            android:visibility="invisible"
+            android:layout_below="@+id/textView14" />
+
+        <TextView
+            android:text="Passband frequency2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText5"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="invisible"
+            android:id="@+id/textView18" />
+
+        <TextView
+            android:text="Stopband frequency2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView18"
+            android:layout_marginTop="16dp"
+            android:visibility="invisible"
+            android:id="@+id/textView19" />
+
+
+        <EditText
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="0.5"
+            android:visibility="invisible"
+            android:ems="10"
+            android:id="@+id/editText6"
+            android:layout_alignBaseline="@+id/textView19"
+            android:layout_alignBottom="@+id/textView19"
+            android:layout_alignLeft="@+id/editText2"
+            android:layout_alignStart="@+id/editText2"
+            android:layout_alignRight="@+id/editText2"
+            android:layout_alignEnd="@+id/editText2" />
+
+        <EditText
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="0.4"
+            android:visibility="invisible"
+            android:ems="10"
+            android:id="@+id/editText2"
+            android:layout_alignBaseline="@+id/textView18"
+            android:layout_alignBottom="@+id/textView18"
+            android:layout_alignLeft="@+id/editText5"
+            android:layout_alignStart="@+id/editText5"
+            android:layout_alignRight="@+id/editText5"
+            android:layout_alignEnd="@+id/editText5" />
+
+        <TextView
+            android:text="Minimum stopband attenuation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:id="@+id/textViewAp"
+            android:textColor="#000000"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+
+
+
+        <TextView
+            android:text="Maximum passband ripple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView11"
+            android:layout_alignBaseline="@+id/editText"
+            android:layout_alignBottom="@+id/editText"
+            android:layout_alignParentLeft="true"
+            android:visibility="invisible"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Sampling frequency "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewfs"
+            android:layout_below="@+id/editText"
+            android:layout_alignParentLeft="true"
+            android:visibility="invisible"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Passband frequency "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewwp"
+            android:layout_alignTop="@+id/textView14"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="invisible"
+            android:layout_marginTop="7dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="44100"
+            android:visibility="invisible"
+            android:ems="10"
+            android:layout_below="@+id/textView11"
+            android:layout_alignLeft="@+id/editText4"
+            android:layout_alignStart="@+id/editText4"
+            android:id="@+id/editText8"
+            android:layout_toStartOf="@+id/textView14" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/textViewAp"
+            android:id="@+id/spinnerAs"
+            android:layout_alignTop="@+id/textViewAp" />
+
+        <TextView
+            android:text="Transition Band Level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textViewws"
+            android:layout_toStartOf="@+id/tespinnerxtView29"
+            android:id="@+id/textViewFc"
+            android:textColor="#000000"
+            android:layout_alignRight="@+id/textView18"
+            android:layout_alignEnd="@+id/textView18" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textViewFc"
+            android:layout_toRightOf="@+id/textView11"
+            android:layout_toEndOf="@+id/textView11"
+            android:id="@+id/spinnerFc" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/layoutButton"
+        android:weightSum="10"
+        android:layout_alignParentTop="true"
+        android:layout_weight="0.72">
+
+
+        <Button
+            android:text="OK"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonOK"
+            android:onClick="setCoeffecient"
+            android:orientation="horizontal"
+            android:visibility="visible" />
+
+
+        <Button
+            android:text="Select"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonSelect"
+            android:visibility="visible"
+            android:orientation="horizontal"/>
+
+        <Button
+            android:text="Save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="saveFiltrationData"
+            android:id="@+id/buttonSave" />
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/layoutButton2"
+        android:weightSum="10"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1">
+
+
+        <Button
+            android:text="Magnitude"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonM"
+            android:layout_below="@+id/buttonOK2"
+            android:orientation="horizontal"
+            android:visibility="invisible" />
+
+
+
+        <Button
+            android:text="Preview"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonP"
+            android:onClick="preview"
+            android:orientation="horizontal"
+            android:visibility="invisible" />
+
+        <Button
+            android:text="Impulse res"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonIR"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+</LinearLayout>

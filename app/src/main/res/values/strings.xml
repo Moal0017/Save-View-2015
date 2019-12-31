@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2014 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">Save &amp; View 2015</string>
+    <!--  BluetoothChat -->
+    <string name="send">Send</string>
+    <string name="not_connected">You are not connected to a device</string>
+    <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving BlueCenter app.</string>
+    <string name="wifi_not_enabled_leaving">Wifi was not enabled. Leaving Wifi Chat.</string>
+    <string name="title_connecting">connecting...</string>
+    <string name="title_connected_to">connected to <xliff:g id="device_name">%1$s</xliff:g></string>
+    <string name="title_not_connected">not connected</string>
+    <string name="autosend">Autosend</string>
+    <string name="autosave">Autosave</string>
+
+    <!--  DeviceListActivity -->
+    <string name="scanning">scanning for devices...</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
+
+    <!-- Options Menu -->
+    <string name="connect_to_bluetooth">Connect to Bluetooth</string>
+    <string name="insecure_connect">Connect a device - Insecure</string>
+    <string name="discoverable">Make discoverable</string>
+    <string name="Single">Single</string>
+    <string name="developer">User/Advanced Mode</string>
+    <string name="user">User Mode</string>
+    <string name="Runstop">Run/Stop</string>
+    <string name="disconnect_bluetooth">Disconnect Bluetooth</string>
+
+
+    <!-- Graph Menu -->
+    <string name="chartValues0">Show/Hide  Datapoints</string>
+    <string name="chartValues1">Show/Hide  ChartValues 1</string>
+    <string name="chartValues2">Show/Hide  ChartValues 2</string>
+    <string name="chartValues3">Show/Hide  ChartValues 3</string>
+    <string name="chartValues4">Show/Hide  ChartValues 4</string>
+    <string name="chartValues5">Show/Hide  ChartValues 5</string>
+    <string name="chartValues6">Show/Hide  ChartValues 6</string>
+    <string name="chartValues7">Show/Hide  ChartValues 7</string>
+    <string name="chartValues8">Show/Hide  ChartValues 8</string>
+
+
+
+    <string name="folder">Folder</string>
+    <string name="parentDirectory">Parent Directory</string>
+    <string name="fileSize">File Size</string>
+    <string name="currentDir">Current Dir</string>
+    <string name="channel1">Channel 1:</string>
+    <string name="channel2">Channel 2:</string>
+    <string name="channel3">Channel 3:</string>
+    <string name="channel4">Channel 4:</string>
+    <string name="channel5">Channel 5:</string>
+    <string name="channel6">Channel 6:</string>
+    <string name="channel7">Channel 7:</string>
+    <string name="channel8">Channel 8:</string>
+    <string name="MainLabel">Settings</string>
+
+
+    <string-array name="attenuation_array">
+        <item>60dB</item>
+        <item>80dB</item>
+    </string-array>
+
+    <string-array name="cut_off_LP_and_HP">
+        <item>5Hz-45Hz</item>
+        <item>55Hz-95Hz</item>
+        <item>105Hz-145Hz</item>
+        <item>155Hz-195Hz</item>
+        <item>205Hz-245Hz</item>
+        <item>255Hz-295Hz</item>
+        <item>305Hz-345Hz</item>
+        <item>355Hz-395Hz</item>
+        <item>405Hz-445Hz</item>
+        <item>455Hz-495Hz</item>
+    </string-array>
+
+    <string-array name="MV_length">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+    </string-array>
+
+    <string-array name="cut_off_BP_and_BS">
+        <item>0Hz-30Hz,70Hz-100Hz</item>
+        <item>55Hz-95Hz,105hz-145Hz</item>
+        <item>105Hz-145Hz,155Hz-195Hz</item>
+        <item>155Hz-195Hz,205Hz-245Hz</item>
+        <item>205Hz-245Hz,255Hz-295Hz</item>
+        <item>255Hz-295Hz,305Hz-345Hz</item>
+        <item>305Hz-345Hz,355Hz-395Hz</item>
+        <item>355Hz-395Hz,405Hz-445Hz</item>
+        <item>405Hz-445Hz,455Hz-495Hz</item>
+    </string-array>
+
+
+
+</resources>

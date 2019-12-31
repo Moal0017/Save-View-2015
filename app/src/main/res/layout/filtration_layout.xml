@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:id="@+id/groupRadioButton">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </RadioGroup>
+
+        <RadioButton
+            android:id="@+id/LP_RadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="120dp"
+            android:text="Lowpass"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/HP_RadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="165dp"
+            android:layout_marginBottom="120dp"
+            android:text="Highpass"
+            android:textStyle="bold"
+            android:textSize="25dp"/>
+        <RadioButton
+            android:id="@+id/BP_RadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="80dp"
+            android:text="Bandpass"
+            android:textStyle="bold"
+            android:textSize="25dp"/>
+        <RadioButton
+            android:id="@+id/BS_RadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="165dp"
+            android:layout_marginBottom="80dp"
+            android:text="Bandstop"
+            android:textStyle="bold"
+            android:textSize="25dp"/>
+        <RadioButton
+            android:id="@+id/MV_RadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="40dp"
+            android:text="Moving Average"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frame2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/Min_SB_Atten_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:text="Minimum Stopband Attenuation:"
+            android:textColor="#F31"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/Min_SB_Atten_Spinner"
+            android:layout_width="101dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="255dp"
+            android:layout_marginTop="-4dp">
+
+        </Spinner>
+
+        <TextView
+            android:id="@+id/Trans_Band_Level_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="40dp"
+            android:text="Transition Band Level:"
+            android:textColor="#F31"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+
+        <Spinner
+            android:id="@+id/Trans_Band_Level_Spinner"
+            android:layout_width="166dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="40dp">
+
+        </Spinner>
+
+        <TextView
+            android:id="@+id/Filter_Point_TextView"
+            android:layout_width="101dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="80dp"
+            android:text="Filter Point:"
+            android:textColor="#F31"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/Filter_Point_Spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="80dp">
+
+        </Spinner>
+
+        <Button
+            android:id="@+id/apply_btn"
+            android:layout_width="172dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="10dp"
+            android:onClick="applyFilterSettings"
+            android:text="Apply parameters" />
+
+        <Button
+            android:id="@+id/select_btn"
+            android:layout_width="172dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="10dp"
+            android:text="Select file" />
+
+        <Button
+            android:id="@+id/filtration_btn"
+            android:layout_width="172dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginEnd="10dp"
+            android:onClick="saveFiltrationData"
+            android:text="Filter and save" />
+
+    </FrameLayout>
+
+</LinearLayout>

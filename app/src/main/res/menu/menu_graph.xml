@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/filter"
+        android:showAsAction="always"
+        android:title="Filter Settings"/>
+
+    <item
+        android:id="@+id/fillUnfill"
+        android:showAsAction="always"
+        android:title="@string/chartValues0"/>
+
+    <item
+        android:id="@+id/chartValues1"
+        android:showAsAction="always"
+        android:title="@string/chartValues1"/>
+
+    <item
+        android:id="@+id/chartValues2"
+        android:showAsAction="always"
+        android:title="@string/chartValues2"/>
+
+    <item
+        android:id="@+id/chartValues3"
+        android:showAsAction="always"
+        android:title="@string/chartValues3"/>
+
+    <item
+        android:id="@+id/chartValues4"
+        android:showAsAction="always"
+        android:title="@string/chartValues4"/>
+
+    <item
+        android:id="@+id/chartValues5"
+        android:showAsAction="always"
+        android:title="@string/chartValues5"/>
+
+    <item
+        android:id="@+id/chartValues6"
+        android:showAsAction="always"
+        android:title="@string/chartValues6"/>
+
+    <item
+        android:id="@+id/chartValues7"
+        android:title="@string/chartValues7"/>
+
+    <item
+        android:id="@+id/chartValues8"
+        android:showAsAction="always"
+        android:title="@string/chartValues8"/>
+
+</menu>

@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ Copyright 2014 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/EditText1_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/channel1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLength="10"
+                android:text="Channel1" />
+
+
+            <EditText
+                android:id="@+id/channel2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLength="10"
+                android:text="Channel2" />
+
+            <EditText
+                android:id="@+id/channel3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLength="10"
+                android:text="Channel3" />
+
+            <EditText
+                android:id="@+id/channel4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLength="10"
+                android:text="Channel4" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/TextView1_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EditText1_layout"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/TextView1_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0.0"
+                android:textColor="#000FFF" />
+
+            <TextView
+                android:id="@+id/TextView1_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0.0"
+                android:textColor="#000FFF" />
+
+            <TextView
+                android:id="@+id/TextView1_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0.0"
+                android:textColor="#000FFF" />
+
+            <TextView
+                android:id="@+id/TextView1_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0.0"
+                android:textColor="#000FFF" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/EditText2_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TextView1_layout"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/channel5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLength="10"
+                android:text="Channel5" />
+
+            <EditText
+                android:id="@+id/channel6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLength="10"
+                android:text="channel6" />
+
+            <EditText
+                android:id="@+id/channel7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLength="10"
+                android:text="Channel7" />
+
+            <EditText
+                android:id="@+id/channel8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLength="10"
+                android:text="Channel8" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/TextView2_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EditText2_layout"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/TextView2_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0.0"
+                android:textColor="#000FFF" />
+
+            <TextView
+                android:id="@+id/TextView2_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0.0"
+                android:textColor="#000FFF" />
+
+            <TextView
+                android:id="@+id/TextView2_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0.0"
+                android:textColor="#000FFF" />
+
+            <TextView
+                android:id="@+id/TextView2_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0.0"
+                android:textColor="#000FFF" />
+
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cb2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TextView1_layout"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+        <CheckBox
+            android:id="@+id/autosave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_below="@+id/TextView2_4"
+            android:enabled="true"
+            android:text="@string/autosave" />
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bttn_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/all"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" />
+
+
+
+    <LinearLayout
+        android:id="@+id/bttn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/button_run"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:text="Single"
+            android:textAllCaps="false"
+            android:textColor="#FFF7F7"
+            android:background="@drawable/buttonshape"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="7"
+            />
+
+        <Button
+            android:id="@+id/button_run_cont"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/Runstop"
+            android:textAllCaps="false"
+            android:textColor="#FFF7F7"
+            android:background="@drawable/buttonshape"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="7"
+            />
+
+        <Button
+            android:id="@+id/button_record"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:text="Record"
+            android:textAllCaps="false"
+            android:textColor="#FFF7F7"
+            android:background="@drawable/buttonshape"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="7"
+            />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:text="Save"
+            android:textColor="#FFF7F7"
+            android:background="@drawable/buttonshape"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="7"
+            />
+
+        <Button
+            android:id="@+id/button_send_file"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:text="Send \nFile"
+            android:textAllCaps="false"
+            android:textColor="#FFF7F7"
+            android:background="@drawable/buttonshape"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="7"/>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/layoutAll2"
+        android:weightSum="10"
+        android:layout_above="@+id/bttn_layout"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="5">
+
+            <EditText
+                android:id="@+id/ch1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:lines="1"
+                android:singleLine="true"
+                android:maxLength="10"
+                android:text="Channel1" />
+
+
+            <EditText
+                android:id="@+id/ch2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:lines="1"
+                android:singleLine="true"
+                android:maxLength="10"
+                android:text="Channel2" />
+
+            <EditText
+                android:id="@+id/ch3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:lines="1"
+                android:singleLine="true"
+                android:maxLength="10"
+                android:text="Channel3" />
+
+            <EditText
+                android:id="@+id/ch4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:lines="1"
+                android:singleLine="true"
+                android:maxLength="10"
+                android:text="Channel4" />
+
+            <EditText
+                android:id="@+id/ch5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:lines="1"
+                android:singleLine="true"
+                android:maxLength="10"
+                android:text="Channel5" />
+
+            <EditText
+                android:id="@+id/ch6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:lines="1"
+                android:singleLine="true"
+                android:maxLength="10"
+                android:text="Channel6" />
+
+            <EditText
+                android:id="@+id/ch7"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:lines="1"
+                android:singleLine="true"
+                android:maxLength="10"
+                android:text="Channel7" />
+
+            <EditText
+                android:id="@+id/ch8"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:lines="1"
+                android:singleLine="true"
+                android:maxLength="10"
+                android:text="Channel8" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="5">
+
+            <TextView
+                android:id="@+id/ch1Val"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:text="0.0"
+                android:textColor="#000FFF" />
+
+            <TextView
+                android:id="@+id/ch2Val"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:text="0.0"
+                android:textColor="#000FFF" />
+
+            <TextView
+                android:id="@+id/ch3Val"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="0.0"
+                android:textColor="#000FFF" />
+
+            <TextView
+                android:id="@+id/ch4Val"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:text="0.0"
+                android:textColor="#000FFF" />
+
+            <TextView
+                android:id="@+id/ch5Val"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:text="0.0"
+                android:textColor="#000FFF" />
+
+            <TextView
+                android:id="@+id/ch6Val"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:text="0.0"
+                android:textColor="#000FFF" />
+
+            <TextView
+                android:id="@+id/ch7Val"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:text="0.0"
+                android:textColor="#000FFF" />
+
+            <TextView
+                android:id="@+id/ch8Val"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:text="0.0"
+                android:textColor="#000FFF" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
