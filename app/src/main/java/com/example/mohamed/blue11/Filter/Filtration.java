@@ -924,7 +924,9 @@ public class Filtration extends AppCompatActivity implements AdapterView.OnItemS
             index8 = (index8 + 1) % filterTaps;
             return y8;
         }
-    } 
+    }
+
+    //Little change for master branch :)
     // Save filtered data
     public void saveFiltrationData(View v) {
         Toast.makeText(getBaseContext(), "Applying Filtration, please wait..", Toast.LENGTH_LONG).show();
