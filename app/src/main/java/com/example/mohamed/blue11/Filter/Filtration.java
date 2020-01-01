@@ -943,6 +943,7 @@ public class Filtration extends AppCompatActivity implements AdapterView.OnItemS
         }
     }
 
+    // some little change for develop branch :)
     // Main thread of filtration (parent)
     class DoFiltration implements Runnable {
         Filtration.Channel1Thread ch1 = new Filtration.Channel1Thread();
