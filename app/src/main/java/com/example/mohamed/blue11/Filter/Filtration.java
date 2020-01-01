@@ -189,10 +189,9 @@ public class Filtration extends AppCompatActivity implements AdapterView.OnItemS
                 dialog.addFileListener(new FileDialog.FileSelectedListener() {
                     @Override
                     public void fileSelected(File file) {
-                        Log.d(getClass().getName(), "selected file " + file.toString());
+                        Log.d(getClass().getName(), "selected file ::" + file.toString());
                         String fileString = file.toString();
                         fileName = fileString.substring(fileString.lastIndexOf("/") + 1, fileString.lastIndexOf("."));
-                        //  System.out.println("file name is"+fileName);
                         file = new File(file.toString());
                         String message = null;
                         try {
@@ -217,9 +216,27 @@ public class Filtration extends AppCompatActivity implements AdapterView.OnItemS
             }
         });
 
+        save_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getBaseContext(), "Applying Filtration, please wait..", Toast.LENGTH_LONG).show();
+                new Thread(new SaveFilteredData()).start();
+                synchronized(mutex) {
+                    // Wait until being notified
+                    try {
+                        mutex.wait();
+                        Toast.makeText(getBaseContext(), "Done!", Toast.LENGTH_SHORT).show();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                select_btn.setEnabled(false);
+                save_btn.setEnabled(false);
+            }
+        });
 
     }
-
     // clear unchecked Radio Buttons
     private void clearUnSelectedRadioButtons() {
         for (int i : mRadioButtonsId) {
@@ -926,6 +943,7 @@ public class Filtration extends AppCompatActivity implements AdapterView.OnItemS
         }
     }
 
+<<<<<<< HEAD
     //Little change for master branch :)
     // Save filtered data
     public void saveFiltrationData(View v) {
@@ -944,6 +962,9 @@ public class Filtration extends AppCompatActivity implements AdapterView.OnItemS
         select_btn.setEnabled(false);
         save_btn.setEnabled(false);
     }
+=======
+    // some little change for develop branch :)
+>>>>>>> 41979a7a2b53074903c33eb6d2bd39ce495793e1
     // Main thread of filtration (parent)
     class DoFiltration implements Runnable {
         Filtration.Channel1Thread ch1 = new Filtration.Channel1Thread();
